@@ -1,6 +1,7 @@
 package br.com.alura.screenmatch.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 public class Episodio {
     private Integer temporada;
@@ -19,7 +20,13 @@ public class Episodio {
         }catch (NumberFormatException ex){
             this.avaliacao = 0.0;
         }
-        this.dataDoLancamento = LocalDate.parse(dadosEpisodio.dataDoLancamento());
+
+        try{
+            this.dataDoLancamento = LocalDate.parse(dadosEpisodio.dataDoLancamento());
+        }catch(DateTimeParseException ex){
+            this.dataDoLancamento = null;
+        }
+
 
     }
     public Integer getTemporada() {

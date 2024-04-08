@@ -10,7 +10,7 @@ public class Episodio {
     private double avaliacao;
     private LocalDate dataDoLancamento;
 
-    public Episodio(Integer numeroTemporada, DadoEpisodio dadosEpisodio){
+        public Episodio(Integer numeroTemporada, DadosEpisodio dadosEpisodio){
         this.temporada = numeroTemporada;
         this.titulo = dadosEpisodio.titulo();
         this.numeroEpisodio = dadosEpisodio.numero();
@@ -71,10 +71,10 @@ public class Episodio {
 
     @Override
     public String toString() {
-        return "Temporada=" + temporada +
-                ", Titulo='" + titulo + '\'' +
+        return "Temporada= " + temporada +
+                ", Titulo= '" + titulo + '\'' +
                 ", Numero do Episodio= " + numeroEpisodio +
                 ", avaliacao= " + avaliacao +
-                ", Data de Lançamento=" + dataDoLancamento;
+                ", Data de Lançamento= " + dataDoLancamento;
     }
 }

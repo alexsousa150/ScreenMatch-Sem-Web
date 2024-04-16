@@ -10,7 +10,7 @@ import org.springframework.core.SpringVersion;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class    Principal {
+public class Principal {
     private Scanner leitura = new Scanner(System.in);
     private ConsumoAPI consumo = new ConsumoAPI();
 
@@ -99,7 +99,9 @@ public class    Principal {
             Serie serie = new Serie(dados);
             repositorio.save(serie);
             System.out.println(dados);
+
         }
+
 
         private DadosSerie getDadosSerie() {
             System.out.println("Digite o nome da série para busca:");

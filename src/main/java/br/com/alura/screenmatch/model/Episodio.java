@@ -14,7 +14,7 @@ public class Episodio {
     private String titulo;
     private Integer numeroEpisodio;
     private double avaliacao;
-    private LocalDate dataDoLancamento;
+    private LocalDate dataLancamento;
     @ManyToOne
     private Serie serie;
     public Episodio(){}
@@ -31,9 +31,9 @@ public class Episodio {
         }
 
         try{
-            this.dataDoLancamento = LocalDate.parse(dadosEpisodio.dataDoLancamento());
+            this.dataLancamento = LocalDate.parse(dadosEpisodio.dataDoLancamento());
         }catch(DateTimeParseException ex){
-            this.dataDoLancamento = null;
+            this.dataLancamento = null;
         }
 
 
@@ -96,11 +96,11 @@ public class Episodio {
     }
 
     public LocalDate getDataDoLancamento() {
-        return dataDoLancamento;
+        return dataLancamento;
     }
 
-    public void setDataDoLancamento(LocalDate dataDoLancamento) {
-        this.dataDoLancamento = dataDoLancamento;
+    public void setDataDoLancamento(LocalDate dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
 
     @Override
@@ -109,6 +109,6 @@ public class Episodio {
                 ", Titulo= '" + titulo + '\'' +
                 ", Numero do Episodio= " + numeroEpisodio +
                 ", avaliacao= " + avaliacao +
-                ", Data de Lançamento= " + dataDoLancamento;
+                ", Data de Lançamento= " + dataLancamento;
     }
 }
